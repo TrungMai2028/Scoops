@@ -2,6 +2,7 @@ import { useProductStore } from '../store/useProductStore';
 import { useEffect } from 'react';
 import { PackageIcon, PlusCircleIcon, RefreshCwIcon } from "lucide-react";
 import ProductCard from '../components/productCard';
+import AddProductModal from '../components/AddProductModal';
 
 function HomePage() {
   
@@ -18,10 +19,13 @@ function HomePage() {
       <div className="flex justify-between items-center mb-8">
         <button
           className="btn btn-primary"
+          onClick={() => document.getElementById("add_product_modal").showModal()}
         >
           <PlusCircleIcon className="size-5 mr-2" />
           Add Product
         </button>
+
+        <AddProductModal/>
 
         <button className="btn btn-ghost btn-circle" onClick={fetchProducts}>
           <RefreshCwIcon className="size-5" />
