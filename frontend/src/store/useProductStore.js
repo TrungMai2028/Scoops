@@ -2,14 +2,15 @@ import { create } from "zustand";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-
-const BASE_URL = "http://localhost:3000";
+// base url will be dynamic depending on the environment
+const BASE_URL = import.meta.env.MODE === "development" ? "http://localhost:3000" : "";
  
 export const useProductStore = create((set, get) => ({
   // State
   products: [],
   loading: false,
   error: null,
+  currentProduct: null,
 
   formData: {
     name:"",
@@ -66,5 +67,36 @@ export const useProductStore = create((set, get) => ({
       } finally {
         set({ loading: false });
       }
+  },
+
+  fetchProduct: async (id) => {
+    set({ loading: true });
+    try {
+      const response = await axios.get(`${BASE_URL}/api/products/${id}`);
+      set({
+        currentProduct: response.data.data,
+        formData: response.data.data, // pre-fill form with current product data
+        error: null,
+      });
+    } catch (error) {
+      console.log("Error in fetchProduct function", error);
+      set({ error: "Something went wrong", currentProduct: null });
+    } finally {
+      set({ loading: false });
+    }
+  },
+  updateProduct: async (id) => {
+    set({ loading: true });
+    try {
+      const { formData } = get();
+      const response = await axios.put(`${BASE_URL}/api/products/${id}`, formData);
+      set({ currentProduct: response.data.data });
+      toast.success("Product updated successfully");
+    } catch (error) {
+      toast.error("Something went wrong");
+      console.log("Error in updateProduct function", error);
+    } finally {
+      set({ loading: false });
+    }
   },
 }));
