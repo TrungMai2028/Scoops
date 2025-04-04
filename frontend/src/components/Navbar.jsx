@@ -1,5 +1,5 @@
 import { Link, useResolvedPath } from "react-router-dom";
-import { ShoppingBagIcon, ShoppingCartIcon } from "lucide-react";
+import { ShoppingBagIcon, IceCreamCone } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 
 
@@ -15,16 +15,24 @@ function Navbar({theme}) {
           <div className="flex-1 lg:flex-none">
             <Link to="/" className="hover:opacity-80 transition-opacity">
               <div className="flex items-center gap-2">
-                <ShoppingCartIcon className="size-9 text-primary" />
+                <IceCreamCone className="size-9 text-primary"/>
                 <span
                   className="font-semibold font-mono tracking-widest text-2xl 
                     bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
                 >
-                  POSGRESTORE
+                  SCOOP
                 </span>
               </div>
             </Link>
           </div>
+
+          {/* Middle section */}
+          <div className="hidden md:flex gap-4"> {/* Hide on small screens */}
+            <Link to="/mainPage" className="btn btn-ghost">MAIN</Link>
+            <Link to="/contact" className="btn btn-ghost">CONTACT US</Link>
+            <Link to="/menu" className="btn btn-ghost">MENU</Link>
+          </div>
+
 
           {/* Right seciton */}
           <div className="flex items-center gap-4">

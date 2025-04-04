@@ -4,7 +4,7 @@ import { PackageIcon, PlusCircleIcon, RefreshCwIcon } from "lucide-react";
 import ProductCard from '../components/productCard';
 import AddProductModal from '../components/AddProductModal';
 
-function HomePage() {
+function Menu() {
   
   const {products, loading, error, fetchProducts} = useProductStore();
 
@@ -63,4 +63,4 @@ function HomePage() {
   )
 }
 
-export default HomePage
+export default Menu
