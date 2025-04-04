@@ -2,6 +2,8 @@ import Navbar from "./components/NavBar";
 import Menu from "./pages/Menu";
 import ProductPage from "./pages/ProductPage";
 import MainPage from "./pages/MainPage";
+import Payment from "./pages/Payment";
+
 
 import { Routes, Route } from "react-router-dom";
 import { useThemeStore } from "./store/useThemeStore";
@@ -19,6 +21,7 @@ function App() {
         <Route path="/" element={<Menu/>}/>
         <Route path="/product/:id" element={<ProductPage/>}/>
         <Route path="/mainPage" element={<MainPage/>}/>
+        <Route path="/payment" element={<Payment/>}/>
       </Routes>
 
       <Toaster/>

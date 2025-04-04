@@ -1,4 +1,4 @@
-import { EditIcon, Trash2Icon } from "lucide-react";
+import { ShoppingBasket } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useProductStore } from "../store/useProductStore";
 
@@ -25,15 +25,8 @@ function ProductCard({product}) {
                 {/* CARD ACTIONS */}
                 <div className="card-actions justify-end mt-4">
                     <Link to={`/product/${product.id}`} className="btn btn-sm btn-info btn-outline">
-                        <EditIcon className="size-4" />
+                        <ShoppingBasket className="size-4"/>
                     </Link>
-
-                    <button
-                        className="btn btn-sm btn-error  btn-outline"
-                        onClick={() => deleteProduct(product.id)}
-                    >
-                        <Trash2Icon className="size-4" />
-                    </button>
                 </div>
             </div>
 

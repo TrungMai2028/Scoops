@@ -1,5 +1,5 @@
 import { Link, useResolvedPath } from "react-router-dom";
-import { ShoppingBagIcon, IceCreamCone } from "lucide-react";
+import { IceCreamCone } from "lucide-react";
 import ThemeSelector from "./ThemeSelector";
 
 
@@ -20,36 +20,23 @@ function Navbar({theme}) {
                   className="font-semibold font-mono tracking-widest text-2xl 
                     bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary"
                 >
-                  SCOOP
+                  SCOOPS
                 </span>
               </div>
             </Link>
           </div>
 
-          {/* Middle section */}
-          <div className="hidden md:flex gap-4"> {/* Hide on small screens */}
+          {/* CENTER section */}
+          <div className="navbar-center hidden md:flex gap-4">
             <Link to="/mainPage" className="btn btn-ghost">MAIN</Link>
+            <Link to="/" className="btn btn-ghost">MENU</Link>
             <Link to="/contact" className="btn btn-ghost">CONTACT US</Link>
-            <Link to="/menu" className="btn btn-ghost">MENU</Link>
           </div>
 
 
           {/* Right seciton */}
           <div className="flex items-center gap-4">
             <ThemeSelector/>
-
-            {isHomePage && (
-
-              <div className="indicator">
-                <div className="p-2 rounded-full hover:bg-base-200 transition-colors">
-                  <ShoppingBagIcon className="size-5" />
-                  <span className="badge badge-sm badge-primary indicator-item">
-                    8
-                  </span>
-                </div>
-                </div>
-            )}
-
           </div>
 
         </div>

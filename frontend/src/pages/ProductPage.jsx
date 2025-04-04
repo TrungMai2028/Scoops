@@ -1,7 +1,7 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { useProductStore } from "../store/useProductStore";
 import { useEffect } from "react";
-import { ArrowLeftIcon, SaveIcon, Trash2Icon } from "lucide-react";
+import { ArrowLeftIcon, SaveIcon, CreditCardIcon } from "lucide-react";
 
 function ProductPage() {
   const {
@@ -119,10 +119,10 @@ function ProductPage() {
 
               {/* FORM ACTIONS */}
               <div className="flex justify-between mt-8">
-                <button type="button" onClick={handleDelete} className="btn btn-error">
-                  <Trash2Icon className="size-4 mr-2" />
-                  Delete Product
-                </button>
+                <Link to="/payment" className="btn btn-secondary"> {/* Changed styling from btn-error */}
+                  <CreditCardIcon className="size-4 mr-2" /> {/* Changed Icon */}
+                  Pay Now {/* Changed Text */}
+                </Link>
 
                 <button
                   type="submit"
