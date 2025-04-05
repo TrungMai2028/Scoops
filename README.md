@@ -41,11 +41,11 @@ This project was developed for the TigerHackathon and won **First Prize**.
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/TrungMai2028/StoreWeb.git
-    cd scoop-project-directory
+    cd scoop
     ```
 
 2.  **Backend Setup:**
-    * Navigate to the backend directory (e.g., `cd backend copy` or your actual backend folder name).
+    * Navigate to the backend directory (e.g., `cd backend` or your actual backend folder name).
     * Install dependencies:
         ```bash
         npm install
@@ -77,7 +77,7 @@ This project was developed for the TigerHackathon and won **First Prize**.
         ```
 
 3.  **Frontend Setup:**
-    * Navigate to the frontend directory (e.g., `cd ../src copy` or your actual frontend folder name).
+    * Navigate to the frontend directory (e.g., `cd ../src` or your actual frontend folder name).
     * Install dependencies:
         ```bash
         npm install
@@ -92,31 +92,7 @@ This project was developed for the TigerHackathon and won **First Prize**.
         ```
     * The application should now be running, typically at `http://localhost:5173` (Vite's default).
 
-## Folder Structure
-
-.
-├── backend copy/        # Backend (Express.js) code
-│   ├── config/          # Database configuration (db.js)
-│   ├── controllers/     # Request handlers (productController.js)
-│   ├── lib/             # Helper libraries (arcjet.js)
-│   ├── routes/          # API routes (productRoutes.js)
-│   ├── seed/            # Database seeding script (products.js)
-│   ├── .env             # Environment variables (Needs creation)
-│   └── server.js        # Main server file
-│
-├── src copy/            # Frontend (React) code (Assuming this is your frontend root)
-│   ├── components/      # Reusable UI components
-│   ├── constants/       # Constant values (e.g., themes)
-│   ├── images/          # Static image assets
-│   ├── pages/           # Page-level components
-│   ├── store/           # Zustand state management stores
-│   ├── App.jsx          # Main application component with routing
-│   ├── index.css        # Tailwind base styles
-│   └── main.jsx         # Entry point for React app
-│
-└── README.md            # This file
-
-*(Note: Folder names like `backend copy` and `src copy` should be replaced with your actual folder names if different)*
+*(Note: Folder names like `backend` and `src` should be replaced with your actual folder names if different)*
 
 ## Future Enhancements
 
