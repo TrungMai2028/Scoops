@@ -3,6 +3,7 @@ import Menu from "./pages/Menu";
 import ProductPage from "./pages/ProductPage";
 import MainPage from "./pages/MainPage";
 import Payment from "./pages/Payment";
+import ContactPage from "./pages/Contact";
 
 
 import { Routes, Route } from "react-router-dom";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/product/:id" element={<ProductPage/>}/>
         <Route path="/mainPage" element={<MainPage/>}/>
         <Route path="/payment" element={<Payment/>}/>
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       <Toaster/>
