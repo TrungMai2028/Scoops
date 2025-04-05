@@ -2,7 +2,7 @@
 
 Scoop is a full-stack web application designed for a local ice cream shop. It allows customers to browse the menu, view product details, add items to a cart, and proceed through a simple checkout process. The project also includes basic backend functionality for managing products.
 
-This project was developed for the TigerHackathon and won **First Prize**.
+This project was developed for the TigerHackathon.
 
 ## Features
 
